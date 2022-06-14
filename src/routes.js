@@ -5,8 +5,8 @@ import Filmes from './pages/Filmes';
 import Favoritos from './pages/Favoritos';
 import Carrinho from './pages/Carrinho';
 import Checkout from './pages/Checkout';
-import Erro from './pages/Erro';
 import Header from './components/Header';
+import Erro from './pages/Erro';
 
 
 export default function RoutesApp(){

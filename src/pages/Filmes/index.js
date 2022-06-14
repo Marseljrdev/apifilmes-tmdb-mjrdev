@@ -11,7 +11,7 @@ export default function Filmes() {
   const navigate = useNavigate();
   const [filme, setFilme] = useState({});
   const [loading, setLoading] = useState(true);
-  const [preco, setPreco] = useState(9,99);
+  const [preco, setPreco] = useState('9,99');
 
   useEffect(() => {
 

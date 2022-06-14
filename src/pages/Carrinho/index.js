@@ -33,9 +33,9 @@ export default function Carrinho() {
             {filmes.map((item) => {
                 return(
                     <li key={item.id} >
-                        <label> Nome: </label>
-                        <strong> {item.title} </strong>
-                        <label> R$ {preco} </label>
+                        <label> Nome: <strong> {item.title} </strong> </label>
+                        
+                        <label> Valor: <strong>R$ {preco} </strong> </label>
 
                         <div>
                             <Link to={`/filmes/${item.id}`} >Ver detalhes</Link>

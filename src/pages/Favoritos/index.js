@@ -25,7 +25,7 @@ export default function Favoritos() {
 
         setFilmes(filtroFilmes);
         localStorage.setItem("@filmes", JSON.stringify(filtroFilmes));
-        toast.info('Filme deletado com sucesso')
+        toast.info('Filme deletado com sucesso');
     }
 
      function redirect(){

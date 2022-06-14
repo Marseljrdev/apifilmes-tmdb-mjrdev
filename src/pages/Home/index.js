@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom';
+import { FiSearch } from 'react-icons/fi';
 import './home.css';
 
 
@@ -11,6 +12,7 @@ export default function Home(){
 
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [preco, setPreco] = useState('9,99');
 
 
     useEffect(() => {
@@ -53,9 +55,10 @@ export default function Home(){
                             <img src={`https://image.tmdb.org/t/p/original/${item.poster_path}`} alt={item.id} />
                             <strong> {item.title} </strong>
                             <span> Avaliação: {item.vote_average} / 10 </span>
+                            <span> R$ {preco} </span>
                             <p>Lançado em: {item.release_date}</p>
                             <Link to={`/filmes/${item.id}`} >
-                                Acessar
+                                Pesquisar <FiSearch size={15} />
                             </Link>
 
                         </li>

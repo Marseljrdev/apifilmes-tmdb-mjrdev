@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Carrinho() {
 
     const [filmes, setFilmes] = useState([]);
+    const [preco, setPreco] = useState('9,99');
 
     useEffect(() => {
 
@@ -32,7 +33,9 @@ export default function Carrinho() {
             {filmes.map((item) => {
                 return(
                     <li key={item.id} >
+                        <label> Nome: </label>
                         <strong> {item.title} </strong>
+                        <label> R$ {preco} </label>
 
                         <div>
                             <Link to={`/filmes/${item.id}`} >Ver detalhes</Link>

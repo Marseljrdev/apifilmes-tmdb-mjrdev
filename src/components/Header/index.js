@@ -34,17 +34,3 @@ export default function Header() {
  );
 }
 
-
-/*         <div className='container-input' >
-            <input 
-                type="text" 
-                placeholder="Pesquisar filme" 
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-            />
-
-            <button type='button' className="buttonsearch" onClick={handleSubmit} >
-                <FiSearch size={25} />
-            </button>
-
-        </div> */

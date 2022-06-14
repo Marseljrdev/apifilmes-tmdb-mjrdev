@@ -13,6 +13,8 @@ export default function Checkout() {
     const [cidade, setCidade] = useState('');
     const [estado, setEstado] = useState('');
 
+    const [preco, setPreco] = useState('9,99');
+
     const [filmes, setFilmes] = useState([]);
 
     const [showPostModal, setShowPostModal] = useState(false);
@@ -35,7 +37,7 @@ export default function Checkout() {
         setCidade('');
         setEstado('');
 
-        //console.log(item);
+        console.log(item);
     }
 
  return (
@@ -59,23 +61,39 @@ export default function Checkout() {
 
                 <input type="text" name="estado" placeholder="Estado" value={estado} onChange={(e) => setEstado(e.target.value)} />
 
-            </form>    
-            <ul>
-            <h1>Filmes</h1>
-                {filmes.map((item) => {
-                    return(
-                        <li key={item.id} >
-                        <label>Nome:</label>
-                        <strong> {item.title} </strong>
-                        <label>Avaliação:</label>
-                        <strong> {item.vote_average} / 10 </strong>
-                        
+            </form>   
 
-                        <button type="button" onClick={() => tagglePostModal(item)} >Finalizar</button>
-                        </li>
-                    );
-                })}
-            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope='col'> Nome </th>
+                        <th scope='col'> Avaliação </th>
+                        <th scope='col'> Data de Lançamento </th>
+                        <th scope='col'> Valor </th>
+                        <th scope='col'> # </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {filmes.map((item) => {
+                        return(
+                            <tr key={item.id} >
+                                <td data-label="Nome" > {item.title} </td>
+                                <td data-label="Avaliação" > {item.vote_average} </td>
+                                <td data-label="Data" > {item.release_date} </td>
+                                <td data-label="Valor" > {preco} </td>
+
+
+                                <button type="button" onClick={() => tagglePostModal(item)} >Finalizar</button>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+
+
+
+
         </div>
 
         
@@ -89,4 +107,48 @@ export default function Checkout() {
    </div>
  );
 }
+
+
+
+//<td> <img className="img" src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} /> </td>
+
+
+
+/*             <ul>
+<h1>Filmes</h1>
+{filmes.map((item) => {
+    return(
+        <li key={item.id} >
+        <label>Nome:</label>
+        <strong> {item.title} </strong>
+        <label>Avaliação:</label>
+        <strong> {item.vote_average} / 10 </strong>
+        
+
+                        <button type="button" onClick={() => tagglePostModal(item)} >Finalizar</button>
+                        </li>
+                    );
+                })}
+            </ul> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -28,7 +28,119 @@ h1{
     padding: 8px;
 }
 
-.checkout ul{
+table{
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption{
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr{
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    padding: .35em;
+}
+
+table th, 
+table td{
+    padding: .62em;
+    text-align: center;
+}
+
+table th{
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table td button{
+    border: 0;
+    background-color: brown;
+}
+
+
+.checkout button{
+    background-color: brown;
+    color: #fff;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 37px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 0;
+}
+
+
+@media screen and (max-width: 300px){
+    table{
+        border: 0;
+    }
+    
+    table caption{
+        font-size: 1.3em;
+    }
+
+    table thead{
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr{
+        border-bottom: 2px solid #ddd;
+        display: block;
+        margin-bottom: .65em;
+    }
+
+    table td{
+        display: block;
+        border-bottom: 2px solid #ddd;
+        text-align: right;
+        font-size: 1.1em;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    table td:last-child{
+        border-bottom: 0;
+    }
+}
+
+
+/*  table td .action{
+    border: none;
+    margin-right: 3.5px;
+    padding: 4px;
+    border-radius: 4px;
+    align-items: center;
+    display: inline-block;
+}
+ 
+
+ .checkout ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,19 +150,7 @@ h1{
 
 .checkout ul li{
     list-style: none;
-}
+}  */
 
-.checkout button{
-    background-color: brown;
-    color: #fff;
-    padding: 8px;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    position: relative;
-    cursor: pointer;
-    border: 0;
-}
 
+ 

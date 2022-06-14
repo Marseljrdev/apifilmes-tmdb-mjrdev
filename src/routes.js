@@ -14,13 +14,13 @@ export default function RoutesApp(){
         <BrowserRouter>
         <Header/>
         <Routes>
-            <Route exact path="/" element={ <Home/> } />
-            <Route exact path="/filmes/:id" element={ <Filmes/> } />
-            <Route exact path="/favoritos" element={ <Favoritos/> } />
-            <Route exact path="/carrinho" element={ <Carrinho/> } />
-            <Route exact path="/checkout" element={ <Checkout/> } />
+            <Route  path="/" element={ <Home/> } />
+            <Route  path="/filmes/:id" element={ <Filmes/> } />
+            <Route  path="/favoritos" element={ <Favoritos/> } />
+            <Route  path="/carrinho" element={ <Carrinho/> } />
+            <Route  path="/checkout" element={ <Checkout/> } />
 
-            <Route exact path="*" element={ <Erro/> } />
+            <Route  path="*" element={ <Erro/> } />
         </Routes>    
         </BrowserRouter>    
           

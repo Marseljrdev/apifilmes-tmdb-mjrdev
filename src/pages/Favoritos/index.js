@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BsFillTrashFill, BsCart3 } from 'react-icons/bs';
 import { toast } from 'react-toastify';
 import './favoritos.css';
@@ -7,7 +7,7 @@ import './favoritos.css';
 export default function Favoritos() {
 
     const [filmes, setFilmes] = useState([]);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -28,10 +28,10 @@ export default function Favoritos() {
         toast.info('Filme deletado com sucesso');
     }
 
-     function redirect(){
+/*      function redirect(){
         navigate("/carrinho", { replace: true });
         return;
-    }
+    } */
 
 
     return (
@@ -52,9 +52,10 @@ export default function Favoritos() {
                                 <BsFillTrashFill size={16} />
                             </button>
 
-                            <button type="button" onClick={() => redirect()} >
+                            <Link to="/carrinho" >
                                 <BsCart3 size={16} />
-                            </button>
+                            </Link>
+
 
                         </div>
 
@@ -68,3 +69,6 @@ export default function Favoritos() {
     </div>
     );
 }
+/*                             <button type="button" onClick={redirect} >
+                                <BsCart3 size={16} />
+                            </button> */

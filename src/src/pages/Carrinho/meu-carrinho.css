@@ -1,0 +1,54 @@
+
+
+.meu-carrinho{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.meu-carrinho h1{
+    margin-bottom: 14px;
+}
+
+.meu-carrinho ul{
+    width: 720px;
+}
+
+.meu-carrinho ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.meu-carrinho div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-carrinho button{
+    background-color: brown;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.meu-carrinho a{
+    text-decoration: none;
+    margin-right: 5px;
+    color: brown;
+}
+
+.meu-carrinho a button{
+    padding: 15px;
+    font-size: 18px;
+}

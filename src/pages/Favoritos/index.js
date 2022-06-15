@@ -7,7 +7,7 @@ import './favoritos.css';
 export default function Favoritos() {
 
     const [filmes, setFilmes] = useState([]);
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -28,10 +28,10 @@ export default function Favoritos() {
         toast.info('Filme deletado com sucesso');
     }
 
-/*      function redirect(){
+    function redirect(){
         navigate("/carrinho", { replace: true });
         return;
-    } */
+    } 
 
 
     return (
@@ -51,10 +51,11 @@ export default function Favoritos() {
                             <button type="button" onClick={ () => deleteItem(item.id)} > 
                                 <BsFillTrashFill size={16} />
                             </button>
-
-                            <Link to="/carrinho" >
+                            
+                            <button type="button" onClick={redirect} >
                                 <BsCart3 size={16} />
-                            </Link>
+                            </button> 
+
 
 
                         </div>
@@ -69,6 +70,3 @@ export default function Favoritos() {
     </div>
     );
 }
-/*                             <button type="button" onClick={redirect} >
-                                <BsCart3 size={16} />
-                            </button> */

@@ -1,4 +1,3 @@
-//import { FiSearch } from 'react-icons/fi';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
@@ -8,7 +7,7 @@ export default function Header() {
 
 
     const [filmes, setFilmes] = useState('');
-    //const [input, setInput] = useState('');
+    
 
     useEffect(() => {
         

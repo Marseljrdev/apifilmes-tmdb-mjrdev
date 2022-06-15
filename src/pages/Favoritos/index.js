@@ -44,7 +44,7 @@ export default function Favoritos() {
             {filmes.map((item) => {
                 return(
                     <li key={item.id}>
-                        <span> {item.title} </span>
+                        <strong> Nome:<span> {item.title} </span> </strong>
 
                         <div>
                             <Link to={`/filmes/${item.id}`} >Ver detalhes</Link>

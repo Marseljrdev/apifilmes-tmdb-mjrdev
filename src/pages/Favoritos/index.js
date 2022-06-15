@@ -51,7 +51,8 @@ export default function Favoritos() {
                             <button type="button" onClick={ () => deleteItem(item.id)} > 
                                 <BsFillTrashFill size={16} />
                             </button>
-                            
+
+
                             <button type="button" onClick={redirect} >
                                 <BsCart3 size={16} />
                             </button> 
